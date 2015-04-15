@@ -1,0 +1,287 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+    <include layout="@layout/pintr_g_92_loadspinner_view"/>
+    
+	<ScrollView
+		android:id="@+id/profileSearchPage"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+		<LinearLayout
+			android:layout_marginTop="10dp"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" >
+		    
+		       
+			<LinearLayout
+				android:id="@+id/profileHandleSearchSection"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:gravity="center"
+				android:layout_marginTop="10dp"
+			    android:paddingBottom="10dp"
+				android:orientation="horizontal"
+				android:weightSum="1.0" >
+			    
+				<EditText
+				    android:id="@+id/searchText"
+    				style="@style/EditTextStyle"
+				    android:layout_width="0dp" 
+		            android:layout_weight=".90"
+				    android:layout_height="wrap_content"
+                	android:inputType="text" 
+    				android:background="@drawable/text_background"
+		   			android:hint="@string/SearchForHandleHint"
+		   			android:imeOptions="actionSearch" 
+				    android:ems="10" >
+				</EditText>
+
+				<Button
+				    android:id="@+id/searchButton"
+			        android:background="@drawable/search_button" 
+				    android:layout_marginLeft="10dp"
+				    android:layout_width="40dp"
+				    android:layout_height="40dp"
+				    android:text="" />
+				
+			</LinearLayout>
+		       
+			<LinearLayout
+				android:layout_marginTop="10dp"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+				android:paddingRight="20dp"
+			    android:orientation="vertical" >
+				
+			    <LinearLayout
+					android:id="@+id/profileSearchResultSection"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:gravity="left"
+					android:paddingLeft="30dp"
+					android:paddingRight="30dp"
+				    android:orientation="vertical" >
+				   
+					
+				</LinearLayout>
+			   
+			    <View
+				    android:layout_width="fill_parent"
+				    android:layout_height="1dp"
+					android:paddingTop="10dp"
+					android:background="@color/greyMed"/>
+			    
+			    
+	       	    <RelativeLayout
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="10dp"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:id="@+id/peopleFriendsHdr">
+	       	    
+	
+	       	        
+	           		<TextView
+			            android:id="@+id/peopleFriendsTitle"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+   						android:layout_alignParentLeft="true" 
+		    			android:text="@string/peopleSectionFriends" />
+				     <ImageView
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+	     						android:layout_alignParentRight="true" 
+		    			android:contentDescription="@string/imagetext"
+				        android:src="@drawable/light_grey_left_arrow" />
+				</RelativeLayout>
+			        
+			    <LinearLayout
+					android:id="@+id/peopleFriends"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:gravity="left"
+					android:paddingTop="10dp"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="10dp"
+				    android:orientation="vertical" >
+			            
+			     
+				</LinearLayout>
+				
+			    
+			     <View
+				    android:layout_width="fill_parent"
+				    android:layout_height="1dp"
+				    android:background="@color/greyMed"/>
+			    
+			    
+        	    <RelativeLayout
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingTop="10dp"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:id="@+id/peopleFriendRequestsHdr">
+        	    
+
+	           		<TextView
+			            android:id="@+id/peopleFriendRequestsTitle"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+      						android:layout_alignParentLeft="true" 
+		    			android:text="@string/peopleFriendRequests" />
+				     <ImageView
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+      						android:layout_alignParentRight="true" 
+		    			android:contentDescription="@string/imagetext"
+				        android:src="@drawable/light_grey_left_arrow" />
+				</RelativeLayout>
+			        
+			    <LinearLayout
+					android:id="@+id/peopleFriendRequests"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:gravity="left"
+					android:paddingTop="10dp"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="10dp"
+				    android:orientation="vertical" >
+			            
+			     
+				</LinearLayout>
+				
+			    
+			    <View
+				    android:layout_width="fill_parent"
+				    android:layout_height="1dp"
+				    android:background="@color/greyMed"/>
+
+			    <LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:gravity="center_vertical|left"
+				    android:orientation="horizontal" >
+	
+	        	    
+	        	    <RelativeLayout
+						android:layout_width="fill_parent" 
+						android:layout_height="wrap_content"
+						android:paddingTop="10dp"
+						android:paddingLeft="10dp"
+						android:paddingRight="10dp"
+						android:id="@+id/peopleYouLikeHdr">
+	        	    
+	
+		           		<TextView
+				            android:id="@+id/peopleYouLikeTitle"
+				            android:layout_width="wrap_content"
+				            android:layout_height="wrap_content"
+	      						android:layout_alignParentLeft="true" 
+			    			android:text="@string/peopleSectionYouLike" />
+					     <ImageView
+					        android:layout_width="30dp"
+					        android:layout_height="30dp"
+	      						android:layout_alignParentRight="true" 
+			    			android:contentDescription="@string/imagetext"
+					        android:src="@drawable/light_grey_left_arrow" />
+					</RelativeLayout>
+				</LinearLayout>		
+				
+			    
+			    <LinearLayout
+					android:id="@+id/peopleYouLike"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:gravity="left"
+					android:paddingTop="10dp"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="10dp"
+				    android:orientation="vertical" >
+				    
+	
+					
+				</LinearLayout>
+			      
+			    <View
+				    android:layout_width="fill_parent"
+				    android:layout_height="1dp"
+				    android:background="@color/greyMed"/>
+			    
+			        
+        	    <RelativeLayout
+					android:layout_width="fill_parent" 
+					android:layout_height="wrap_content"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingTop="10dp"
+					android:id="@+id/peopleWhoLikeYouHdr">
+
+			        <TextView
+			            android:id="@+id/peopleWhoLikeYouTitle"
+			            android:layout_width="wrap_content"
+			            android:layout_height="wrap_content"
+       					android:layout_alignParentLeft="true" 
+			            android:text="@string/peopleSectionLikeYou" />
+					
+				     <ImageView
+				        android:layout_width="30dp"
+				        android:layout_height="30dp"
+    					android:layout_alignParentRight="true" 
+				        android:contentDescription="@string/imagetext"
+				        android:src="@drawable/light_grey_left_arrow" />
+		     
+        	    </RelativeLayout>
+        	    
+			    <LinearLayout
+					android:id="@+id/peopleWhoLikeYou"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:gravity="left"
+					android:paddingTop="10dp"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+					android:paddingBottom="10dp"
+				    android:orientation="vertical" >
+			        
+					
+				</LinearLayout>
+				
+			    
+			    <View
+				    android:layout_width="fill_parent"
+				    android:layout_height="1dp"
+				    android:background="@color/greyMed"/>
+			</LinearLayout>
+		
+		</LinearLayout>
+	</ScrollView>
+
+
+</LinearLayout>
+
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

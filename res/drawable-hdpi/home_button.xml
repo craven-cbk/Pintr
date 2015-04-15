@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android"> 
+  
+    <item android:state_checked="true" android:left="2dp" android:top="2dp">
+	    <layer-list>
+	        
+   			<item>
+		    	<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+		    		
+		            <solid 
+		                android:color="@color/MenuButtonBckgdPress" />
+					
+				</shape>    
+		    </item>
+		    
+   			
+   			<item android:drawable="@drawable/house"/>
+   			
+	    </layer-list>    
+    </item>
+     
+    <item>
+	    <layer-list>
+   			<item>
+		    	<shape xmlns:android="http://schemas.android.com/apk/res/android" android:shape="rectangle" >
+		    	 	<solid 
+		                android:color="@color/CharcoalGreyBckGd" />
+				</shape>
+    		</item>
+    		
+    		<item android:drawable="@drawable/house"/>
+   			
+	    </layer-list>
+	</item> 
+	
+</selector>

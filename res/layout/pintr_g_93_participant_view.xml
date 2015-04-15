@@ -1,0 +1,48 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:orientation="vertical"
+    android:id="@+id/participantSummaryView"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+	    
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+			android:layout_marginTop="10dp" >
+		    <TextView
+		        android:id="@+id/user_id"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Large Text"
+			    style="@style/PeopleNameView"
+       			android:layout_alignParentLeft="true"
+				android:background="@drawable/profile_background"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+		    
+		    <ImageView
+		        android:id="@+id/user_attend"
+		        android:layout_width="30dp"
+		        android:layout_height="30dp"
+      			android:layout_alignParentRight="true"
+      			android:visibility = "gone"
+		        android:src="@drawable/blue_question_mark_small" />
+		    
+	     	<Button
+		        android:id="@+id/requestInviteRespondButton"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+      			android:layout_alignParentRight="true"
+		        android:layout_weight="1"
+      			android:visibility = "gone"
+		        android:background="@drawable/green_general_button"
+		        style="@style/ButtonText"
+		        android:text="Accept?" />
+	   	
+		</RelativeLayout>
+			
+</LinearLayout>

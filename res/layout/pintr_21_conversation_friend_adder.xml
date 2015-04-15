@@ -1,0 +1,86 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground"
+	android:weightSum="1.0">
+
+    
+ 	<LinearLayout
+	    android:id="@+id/offlineZone"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center_vertical|left"
+		android:background="@drawable/offline_header_bar"
+	    android:paddingBottom="10dp"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="10dp"
+	    android:orientation="horizontal" 
+   		android:visibility="gone"
+	    android:layout_gravity="center_vertical|center_horizontal" >
+	   
+	     <TextView
+		    android:gravity="center" 
+   			android:textStyle="bold"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+        	android:text="YOU ARE OFFLINE"/>
+	    
+	</LinearLayout>
+	
+    <include layout="@layout/pintr_g_98_menu_view"/>
+   
+    
+	<!-- ***** RECIPIENTS SECTION ****** --> 
+	
+  	<LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+	     android:orientation="vertical"
+         android:id="@+id/friendsPickerSection">
+	  	
+	    <Button
+	        android:id="@+id/AddRecipientsButton"
+	        style="@style/ButtonText"
+		    android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+		    android:layout_alignParentRight="true"
+	        android:text="Add/Remove Recipients" />	
+    	
+	        
+		<ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" >
+		    
+		    <LinearLayout
+		         android:id="@+id/friendsPickerSpinner"
+		       	 style="@style/SubTitleText"
+	    		 android:orientation="vertical"
+		         android:layout_width="match_parent"
+		         android:layout_height="wrap_content"
+			     android:paddingLeft="10dp"
+			     android:paddingRight="10dp"
+			     android:paddingBottom="10dp"
+			     android:paddingTop="10dp" >
+			     
+   			</LinearLayout>
+    
+		</ScrollView>
+   	</LinearLayout>
+   
+	<!-- ***** END RECIPIENTS SECTION ****** -->
+	
+	
+</LinearLayout>
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+</RelativeLayout>

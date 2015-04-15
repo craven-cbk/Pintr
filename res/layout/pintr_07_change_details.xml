@@ -1,0 +1,171 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+
+   
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+	
+	<ScrollView
+		android:id="@+id/codPage"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	   
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+	    android:orientation="vertical" >
+	    
+
+		<TextView
+		    android:id="@+id/firstnameLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="First name:" />
+
+		<EditText
+		    android:id="@+id/firstnameInput"
+       		style="@style/LabelText"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dp"
+			android:paddingRight="20dp"
+			android:layout_marginTop="10dp"
+    		android:background="@drawable/text_background"
+		    android:ems="10">
+		</EditText>
+
+		
+		<TextView
+		    android:id="@+id/lastnameLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Last name:" />
+
+		<EditText
+		    android:id="@+id/lastnameInput"
+       		style="@style/LabelText"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dp"
+			android:paddingRight="20dp"
+			android:layout_marginTop="10dp"
+    		android:background="@drawable/text_background"
+		    android:ems="10">
+		</EditText>
+		
+		
+		
+	
+	    <TextView
+	        android:id="@+id/dobLabel"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+			android:paddingTop="10dp"
+       		style="@style/LabelText"
+	        android:text="Date of birth:"/>
+	    
+	    
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="horizontal" >
+		
+		    <Spinner
+		        android:id="@+id/dob_Year"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+    			style="@style/SpinnerStylesMain"
+		        android:layout_marginTop="10dp" 
+		        android:layout_marginRight="10dp"/>
+
+		    <Spinner
+		        android:id="@+id/dob_Month"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+    			style="@style/SpinnerStylesMain"
+		        android:layout_marginTop="10dp" 
+		        android:layout_marginRight="10dp"  />
+
+		    <Spinner
+		        android:id="@+id/dob_Day"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+    			style="@style/SpinnerStylesMain"
+		        android:layout_marginTop="10dp" />
+		</LinearLayout>
+		    
+		    
+		    
+		<LinearLayout
+			    android:gravity="center" 
+				android:layout_marginTop="20dp"
+				android:orientation="vertical"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" >
+			    
+		    
+		    <TextView
+		        android:id="@+id/genderLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+	       		style="@style/LabelText"
+		        android:text="Gender"/>
+		    
+		    <Spinner
+		        android:id="@+id/GenderSpinner"
+		        android:layout_width="80dp"
+		        android:layout_height="wrap_content"
+    			style="@style/SpinnerStylesMain"
+		        android:layout_marginTop="10dp" />
+		    
+			<TextView
+			    android:id="@+id/ErrorMessgagingLabel" 
+	       		style="@style/LabelText"
+				android:paddingTop="20dp"
+				android:paddingBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="" />
+			
+			<Button
+			    android:id="@+id/SubmitButton"
+			    android:background="@drawable/general_button" 
+			    style="@style/ButtonText"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Change your details" />
+		</LinearLayout>
+		
+		    
+		    
+	    
+	</LinearLayout>
+	
+</ScrollView>
+
+
+</LinearLayout>
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

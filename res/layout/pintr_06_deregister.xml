@@ -1,0 +1,85 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+    
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+	
+	<ScrollView
+		android:id="@+id/deregPage"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	   
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+	    android:orientation="vertical" >
+
+		
+		<TextView
+		    android:id="@+id/DeleteActlLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="20dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Please enter your password to confirm deregistration:" />
+
+		<EditText
+		    android:id="@+id/PasswordInput"
+       		style="@style/LabelText"
+    		android:background="@drawable/text_background"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dp"
+			android:paddingRight="20dp"
+			android:layout_marginTop="10dp"
+		    android:inputType="textPassword" 
+		    android:ems="10">
+		    <requestFocus />
+		</EditText>
+
+		
+		<LinearLayout
+		    android:gravity="center" 
+			android:layout_marginTop="40dp"
+			android:orientation="vertical"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content" >
+		    
+			
+			 <Button
+		        android:id="@+id/DeleteAccountButton"
+		        android:background="@drawable/general_button" 
+		        style="@style/ButtonText"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Delete Account" />
+		</LinearLayout>
+		
+		
+
+	</LinearLayout>
+	
+</ScrollView>
+
+
+</LinearLayout>
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

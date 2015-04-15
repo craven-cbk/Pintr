@@ -1,0 +1,100 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+
+    <include layout="@layout/pintr_g_97_entrypages_header_view"/>
+  	
+	<ScrollView
+		android:id="@+id/regConfirmPage"
+	    android:layout_width="fill_parent"
+	    android:layout_height="wrap_content" >
+	   
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+	    android:orientation="vertical"
+	    android:gravity="center"  >
+
+		
+		<TextView
+		    android:id="@+id/displayLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+    		android:gravity="center"
+		    android:text="Prove you're not a robot" />
+		
+		<TextView
+		    android:id="@+id/subdisplayLabel" 
+       		style="@style/NormalText"
+			android:paddingTop="5dp"
+			android:paddingBottom="20dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+    		android:gravity="center"
+		    android:text="Identify the two images below to complete your registration" />
+
+		<ImageView
+		    android:id="@+id/idImageView1"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:src="@drawable/pintr_logo_glass_small2" />
+		
+		<Spinner
+		        android:id="@+id/idimg1Spinner"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    			style="@style/SpinnerStylesMain"
+		        android:layout_marginTop="10dp" />
+		
+		
+
+		<ImageView
+		    android:id="@+id/idImageView2"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+	        android:layout_marginTop="20dp" 
+		    android:src="@drawable/pintr_logo_glass_small2" />
+		
+		<Spinner
+		        android:id="@+id/idimg2Spinner"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+    			style="@style/SpinnerStylesMain"
+		        android:layout_marginTop="10dp"
+				android:layout_marginBottom="20dp" />
+		
+		<Button
+			    android:id="@+id/SubRegConfirmationButton"
+			    android:background="@drawable/general_button" 
+			    style="@style/ButtonText"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Submit" />
+		
+		<Button
+			    android:id="@+id/RefreshImgsButton"
+			    android:background="@drawable/general_button" 
+			    style="@style/SmallButtonText"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Change pictures" />
+
+	</LinearLayout>
+	
+</ScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,423 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+   
+   <LinearLayout
+	    android:id="@+id/offlineZone"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center_vertical|left"
+		android:background="@drawable/offline_header_bar"
+	    android:paddingBottom="10dp"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="10dp"
+	    android:orientation="horizontal" 
+   		android:visibility="gone"
+	    android:layout_gravity="center_vertical|center_horizontal" >
+	   
+	     <TextView
+		    android:gravity="center" 
+   			android:textStyle="bold"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+        	android:text="YOU ARE OFFLINE"/>
+	    
+	</LinearLayout>
+	
+    <include layout="@layout/pintr_g_98_menu_view"/>
+    
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+		    android:paddingLeft="10dp"
+		    android:paddingRight="10dp" >
+		    
+		     <TextView
+			    android:id="@+id/errorsDisplay"
+			    android:gravity="center" 
+	   			android:textStyle="bold"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+	        	android:text=""/>
+
+			<EditText
+			    android:id="@+id/eventTitle"
+    			style="@style/EditTextStyle"
+    			android:background="@drawable/text_background"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:hint="Event Title"
+			    android:ems="10" >
+			    <requestFocus />
+			</EditText>
+			
+			<EditText
+			    android:id="@+id/eventDescription"
+    			style="@style/EditTextStyle"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:layout_marginTop="10dp"
+				android:hint="Event description (optional)"
+                android:inputType="textMultiLine"
+    			android:background="@drawable/text_background"
+			    android:ems="10" >
+			</EditText>
+						
+			<EditText
+			    android:id="@+id/eventHashtag"
+    			style="@style/EditTextStyle"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:layout_marginTop="10dp"
+				android:hint="Event hashtag (optional)"
+    			android:background="@drawable/text_background"
+			    android:ems="10" >
+			</EditText>
+			
+			<LinearLayout
+				android:id="@+id/eventTypeArea"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="horizontal"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:weightSum="3.0">
+
+		        <Spinner
+		            android:id="@+id/eventTopicSpinner"
+		            android:layout_marginRight="5dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1" />
+
+		        <Spinner
+		            android:id="@+id/eventSubtopicSpinner"
+		            android:layout_marginRight="5dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1" />
+
+		        <Spinner
+		            android:id="@+id/eventInviteStatusSpinner"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1" />
+			</LinearLayout>
+		   	
+			<TextView
+		        android:id="@+id/EventTimeLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="When?" />
+			
+			<LinearLayout
+				android:id="@+id/eventDateArea"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="horizontal"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:weightSum="3.0">
+	
+			    <Spinner
+			        android:id="@+id/event_Day"
+		            android:layout_marginRight="5dp"
+			        android:layout_width="80dp"
+			        android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1"  />
+
+			    <Spinner
+			        android:id="@+id/event_Month"
+		            android:layout_marginRight="5dp"
+			        android:layout_width="80dp"
+			        android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1"   />
+		  
+	  			<Spinner
+			        android:id="@+id/event_Year"
+			        android:layout_width="80dp"
+			        android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1" />
+	</LinearLayout>
+			 	
+		  <LinearLayout
+				android:id="@+id/eventTimeArea"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="horizontal"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+				android:weightSum="2.0">
+
+	  			<Spinner
+			        android:id="@+id/event_hour"
+			        android:layout_width="80dp"
+			        android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+		            android:layout_marginRight="5dp"
+			    	android:layout_weight="1" />
+	
+			    <Spinner
+			        android:id="@+id/event_minute"
+			        android:layout_width="80dp"
+			        android:layout_height="wrap_content"
+    				style="@style/SpinnerStylesMain"
+			    	android:layout_weight="1"   />
+			</LinearLayout>	
+		    
+			<LinearLayout
+					android:id="@+id/eventOrganizersArea"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content" 
+			    	android:orientation="vertical"
+					android:paddingRight="10dp"
+					android:paddingTop="10dp"
+					android:paddingBottom="10dp"
+					android:weightSum="2.0"> 
+						
+				<LinearLayout
+						android:id="@+id/eventOrganizersHeaderArea"
+						android:layout_width="match_parent"
+					    android:layout_height="wrap_content" 
+				    	android:orientation="horizontal"
+						android:weightSum="4.0">
+	
+				    <TextView
+					        android:id="@+id/organisersLabel"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:text="Organisers" 
+				    		android:layout_weight="3" />
+
+				    <TextView
+					        android:id="@+id/organizersDisplay"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:layout_weight="1"
+					        android:background="@drawable/profile_background"
+			    			style="@style/PeopleNameView"
+	        				android:text="organiser" />
+
+				</LinearLayout>
+			   	
+				<LinearLayout
+						android:id="@+id/eventOrganizersDisplayArea"
+						android:layout_width="match_parent"
+					    android:layout_height="wrap_content" 
+				    	android:orientation="horizontal">
+		   		</LinearLayout>
+		   	
+		   	</LinearLayout>
+		   		
+			    
+			<TextView
+		        android:id="@+id/EventLocationLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="Where?" />
+			
+			<LinearLayout
+					android:id="@+id/venueDisplayArea"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content" 
+			    	android:orientation="vertical"> 
+			
+			</LinearLayout>
+			
+		   	<Button
+		    	android:id="@+id/venueAddButton"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:text="Add location"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp" 
+				android:background="@drawable/green_general_button"
+				style="@style/ButtonText"/>
+		   	
+		   	<LinearLayout
+					android:id="@+id/eventInviteesArea"
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+					android:paddingTop="10dp" 
+			    	android:orientation="vertical"> 
+						
+				<RelativeLayout
+							android:id="@+id/eventInviteesHeaderArea"
+							android:layout_width="match_parent"
+						    android:layout_height="wrap_content" >
+	
+				    <TextView
+					        android:id="@+id/inviteesLabel"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+        					android:layout_alignParentLeft="true"
+					        android:text="Invited"  />
+
+				    <Button
+					        android:id="@+id/inviteesAddButton"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/green_general_button"
+        					android:layout_alignParentRight="true"
+       						style="@style/ButtonText"
+					        android:text="Add" />
+
+				    <Button
+					        android:id="@+id/inviteesFwdButton"
+					        android:layout_width="wrap_content"
+					        android:layout_height="wrap_content"
+					        android:background="@drawable/green_general_button"
+	        				style="@style/ButtonText"
+        					android:layout_alignParentRight="true"
+					        android:text="Fwd" />
+				    
+				</RelativeLayout>
+			   	
+				<LinearLayout
+						android:id="@+id/eventInviteesDisplayArea"
+						android:layout_width="match_parent"
+					    android:layout_height="wrap_content" 
+				    	android:orientation="vertical"
+						android:paddingLeft="10dp"
+						android:paddingRight="10dp">
+		   		</LinearLayout>
+		   	
+		   	</LinearLayout>
+			
+		   	
+		   	<Button
+		        android:id="@+id/requestInviteButton"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:background="@drawable/green_general_button"
+		        style="@style/ButtonText"
+		        android:visibility="gone"
+		        android:text="Request Invite" />
+	   	
+			<TextView
+		        android:id="@+id/inviteRequestedLabel"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:text="People requesting an invite to attend"
+       			android:layout_alignParentLeft="true"
+		        android:textAppearance="?android:attr/textAppearanceLarge" />
+	   	
+			<LinearLayout
+				android:id="@+id/invitesRequestedDisplayArea"
+				android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="vertical"
+		        android:visibility="gone"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp">
+	   		</LinearLayout>
+		   	
+		   	
+			<LinearLayout
+					android:layout_width="match_parent"
+				    android:layout_height="wrap_content" 
+			    	android:orientation="horizontal"
+		   	    	android:gravity="center">
+		   			   	
+			   	<Button
+			        android:id="@+id/makeEventButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:background="@drawable/green_general_button"
+			        style="@style/ButtonText"
+			        android:text="Make Event" />
+		   	</LinearLayout>
+			
+			
+		   	
+		   	<LinearLayout
+				android:id="@+id/eventAttendingHeaderArea"
+				android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="vertical"
+				android:weightSum="4.0">
+
+			    <RelativeLayout
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+					android:layout_marginTop="10dp" >
+				    <TextView
+				        android:id="@+id/eventAttendingLabel"
+				        android:layout_width="wrap_content"
+				        android:layout_height="wrap_content"
+				        android:text="Attending?"
+		       			android:layout_alignParentLeft="true"
+				        android:textAppearance="?android:attr/textAppearanceLarge" />
+				    
+				    <ImageView
+				        android:id="@+id/user_attend_symbol"
+				        android:layout_width="20dp"
+				        android:layout_height="20dp"
+		      			android:layout_alignParentRight="true"
+				        android:src="@drawable/blue_question_mark_small" />
+				</RelativeLayout>
+				
+			   	<Button
+			        android:id="@+id/attendEventButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:background="@drawable/green_general_button"
+			        style="@style/ButtonText"
+			        android:text="Attending" />
+			   	
+			   	
+			   	<Button
+			        android:id="@+id/skipEventButton"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:layout_weight="1"
+			        android:background="@drawable/general_button2"
+			        style="@style/ButtonText"
+			        android:text="Skipping" />
+					
+
+			</LinearLayout>
+
+		   			   	    
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

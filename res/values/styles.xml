@@ -1,0 +1,128 @@
+<resources>
+
+    <style name="AppBaseTheme" parent="android:Theme.Light">
+    </style>
+    
+    <style name="AppTheme" parent="AppBaseTheme">
+    	<item name="android:spinnerItemStyle">@style/SpinnerTextUp</item>
+    	<item name="android:spinnerDropDownItemStyle">@style/SpinnerTextDown</item>
+		<item name="android:panelBackground">@drawable/hw_popup_menu</item>
+        <item name="android:textColor">@color/greyMed</item>
+	    <item name="android:textSize">14sp</item>
+    </style>
+	
+    <style name="generalPageBackground" parent="AppTheme">
+   		<item name="android:background">@drawable/background_2</item>
+	</style>
+
+
+
+    <style name="ButtonText">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:layout_margin">3dp</item>
+	    <item name="android:textSize">16sp</item>
+		<item name="android:textStyle">normal|bold</item>
+   </style>
+   
+
+    <style name="SmallButtonText">
+	    <item name="android:layout_width">fill_parent</item>
+	    <item name="android:layout_height">wrap_content</item>
+	    <item name="android:textColor">@color/white</item>
+	    <item name="android:gravity">center</item>
+	    <item name="android:textSize">15sp</item>
+		<item name="android:textStyle">normal|bold</item>
+   </style>
+   
+       
+    <style name="HeaderBarTitleText" parent="AppTheme">
+   		<item name="android:background">#00000000</item>
+	</style>
+	
+    <style name="PeopleNameView" parent="AppTheme">
+        <item name="android:textColor">@color/CharcoalGreyBckGd</item>
+	    <item name="android:textSize">14sp</item>
+	</style>
+	
+    <style name="EvtSumTextSmall" parent="AppTheme">
+        <item name="android:textColor">@color/CharcoalGreyBckGd</item>
+	    <item name="android:textSize">12sp</item>
+	</style>
+	
+    <style name="EvtSumTextBig" parent="AppTheme">
+        <item name="android:textColor">@color/CharcoalGreyBckGd</item>
+	    <item name="android:textSize">16sp</item>
+	</style>
+	
+    
+    <style name="SpinnerStylesMain" parent="AppTheme">
+   		<item name="android:background">@drawable/spinner_background</item>
+    	<item name="android:spinnerItemStyle">@style/SpinnerTextUp</item>
+    	<item name="android:spinnerDropDownItemStyle">@style/SpinnerTextDown</item>
+	</style>
+	
+    <style name="SpinnerTextUp">
+	    <item name="android:paddingTop">5dp</item>
+	    <item name="android:paddingBottom">5dp</item>
+	    <item name="android:paddingLeft">20dp</item>
+	    <item name="android:textColor">@color/LightCharcoal</item>
+	    <item name="android:textSize">14sp</item>
+   </style>
+	
+    <style name="SpinnerTextDown">
+	    <item name="android:paddingTop">5dp</item>
+	    <item name="android:paddingBottom">5dp</item>
+	    <item name="android:paddingLeft">20dp</item>
+	    <item name="android:textColor">@color/LightCharcoal</item>
+	    <item name="android:textSize">14sp</item>
+   </style>
+   
+    
+    <style name="EditTextStyle" parent="AppTheme">
+   		<item name="android:background">@color/white</item>
+	    <item name="android:textColor">@color/LightCharcoal</item>
+   		<item name="android:textSize">14sp</item>
+	    <item name="android:paddingLeft">10dp</item>
+	    <item name="android:paddingRight">10dp</item>
+	    <item name="android:paddingTop">10dp</item>
+	    <item name="android:paddingBottom">10dp</item>
+	</style>
+	
+    <style name="MessageText" parent="AppTheme">
+   		<item name="android:background">#00000000</item>
+	    <item name="android:textColor">@color/DarkCharcoal</item>
+	</style>
+	
+    <style name="TitleText" parent="AppTheme">
+   		<item name="android:background">#00000000</item>
+   		<item name="android:textSize">24sp</item>
+	</style>
+	
+       
+    <style name="HeaderStyle" parent="AppTheme">
+   		<item name="android:background">@color/PintrRed</item>
+   		<item name="android:textSize">24sp</item>
+	</style>
+	
+    <style name="SubTitleText" parent="AppTheme">
+   		<item name="android:background">#00000000</item>
+   		<item name="android:textSize">16sp</item>
+   		<item name="android:textStyle">bold</item>
+	</style>
+	
+    <style name="NormalText" parent="AppTheme">
+   		<item name="android:background">#00000000</item>
+   		<item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/greyMed</item>
+	</style>
+	
+    
+    <style name="LabelText" parent="AppTheme">
+   		<item name="android:background">#00000000</item>
+   		<item name="android:textSize">16sp</item>
+	</style>
+   
+</resources>

@@ -1,0 +1,41 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+	android:orientation="vertical"
+    android:id="@+id/eventSummaryView"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingTop="5dp"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+		
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:paddingBottom="5dp"
+	    android:paddingLeft="5dp"
+	    android:paddingRight="5dp"
+	    android:paddingTop="5dp"
+		android:background="@drawable/eventvenueview_background"
+	    android:orientation="vertical" >
+	    
+	    <TextView
+	        android:id="@+id/venueTitle"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+   			style="@style/EvtSumTextBig"
+	        android:text="Venue"
+        	android:textAppearance="?android:attr/textAppearanceLarge" />
+	    
+         <TextView
+	        android:id="@+id/venueLocation"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+	    	android:layout_marginTop="10dp"
+   			style="@style/EvtSumTextSmall"
+	        android:text="Location"/>
+	
+	</LinearLayout>
+		
+</LinearLayout>

@@ -1,0 +1,207 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground"
+	android:weightSum="1.0">
+
+    
+ 	<LinearLayout
+	    android:id="@+id/offlineZone"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center_vertical|left"
+		android:background="@drawable/offline_header_bar"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="10dp"
+	    android:orientation="horizontal" 
+   		android:visibility="gone"
+	    android:layout_gravity="center_vertical|center_horizontal" >
+	   
+	     
+	     <TextView
+		    android:gravity="center" 
+   			android:textStyle="bold"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+        	android:text="YOU ARE OFFLINE"/>
+	    
+	     
+	</LinearLayout>
+	
+    <include layout="@layout/pintr_g_98_menu_view"/>
+   
+	<!-- ***** RECIPIENTS SECTION ****** --> 
+	
+    <LinearLayout
+		android:id="@+id/messagesRecipientsSection"
+			    android:layout_width="match_parent" 
+	            android:layout_weight=".20"
+	            android:layout_height="0dp" 
+	    		android:orientation="vertical"
+				android:background="@drawable/message_participants_container" >
+	        
+	  	<ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" >
+		    <RelativeLayout
+				android:id="@+id/messagesRecipientsDisplay"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+			    android:paddingTop="10dp"
+	    		style="@style/MessageText" 
+			    android:paddingBottom="10dp" >
+		   	</RelativeLayout>
+	    </ScrollView>
+	    
+    </LinearLayout>
+        
+      	
+  	<LinearLayout
+         android:layout_width="match_parent"
+         android:layout_height="wrap_content" 
+	     android:orientation="vertical"
+         android:id="@+id/friendsPickerSection">
+	  	
+    	<Button
+	        android:id="@+id/AddRecipientsButton"
+	        android:background="@drawable/general_button" 
+	        style="@style/ButtonText"
+		    android:layout_width="match_parent" 
+            android:layout_height="wrap_content" 
+	        android:text="Add/Remove Recipients" />	
+	        
+		<ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" >
+		    <LinearLayout
+		         android:id="@+id/friendsPickerSpinner"
+		       	 style="@style/SubTitleText"
+	    		 android:orientation="vertical"
+		         android:layout_width="match_parent"
+		         android:layout_height="wrap_content"
+			     android:paddingRight="10dp"
+			     android:paddingBottom="10dp"
+			     android:paddingTop="10dp" >
+			     
+   			</LinearLayout>
+    
+		</ScrollView>
+    
+   	</LinearLayout>
+     	
+    <LinearLayout
+		android:id="@+id/messagesAddRecipients"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingBottom="@dimen/activity_vertical_margin" >
+	    <ScrollView
+		    android:layout_width="fill_parent"
+		    android:layout_height="fill_parent" > 
+		</ScrollView>
+   	</LinearLayout> 
+	  
+	<!-- ***** END RECIPIENTS SECTION ****** -->
+	
+	
+	
+	
+	
+	<!-- DISCUSSION DISPLAY AREA (BLANK TIL FILLED BY JAVA) -->	  
+	 		
+	<ScrollView
+		android:id="@+id/messagesDisplaySection"
+	    android:layout_width="match_parent" 
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+        android:layout_weight=".60"
+        android:layout_height="0dp"  >  
+		
+		    <LinearLayout
+		    	android:orientation="vertical"
+				android:id="@+id/DiscussionDisplayView" 
+    			style="@style/MessageText"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content">
+			</LinearLayout>
+		    
+	</ScrollView>
+	
+	<!-- ********   END DISCUSSION DISPLAY AREA ******* -->	 	    
+	
+		
+		
+	<!-- RESPONSE ENTRY BOX -->
+   
+   <ScrollView
+		android:id="@+id/MessageResponseScrollvw"
+    	android:layout_width="match_parent" 
+        android:layout_height="0dp"
+        android:layout_weight=".20"  >
+		     
+    <LinearLayout
+		android:id="@+id/MessageResponseArea"
+	    android:layout_width="match_parent" 
+        android:layout_height="wrap_content" 
+		android:paddingTop="10dp"
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp"
+		android:weightSum="1.0">
+	     
+		
+	    	<EditText
+				android:id="@+id/MessageEntryField"
+				android:background="@color/white"
+				android:inputType="text"
+			    android:lines="2"
+			    android:minLines="2" 
+			    android:maxLines="6"
+    			style="@style/EditTextStyle"
+			    android:layout_width="0dp" 
+	            android:layout_weight=".80"
+	            android:layout_height="wrap_content" 
+	            android:layout_marginRight="10dp"
+         		android:imeOptions="actionGo"
+         		android:hint=""
+				android:text="" >
+			</EditText>			 
+			   
+		    <RelativeLayout
+			    android:layout_width="0dp" 
+	            android:layout_weight=".20"
+			    android:layout_height="match_parent"
+			    android:orientation="horizontal"
+			    android:gravity="center">
+			    
+		    	<Button
+			        android:id="@+id/SubmitButton"
+			        style="@style/ButtonText"
+			        android:background="@drawable/sendmessage_button" 
+				    android:layout_width="40dp" 
+		            android:layout_height="30dp" 
+				    android:layout_alignParentRight="true"
+			        android:text="" />	
+			        
+			</RelativeLayout>
+	</LinearLayout>			
+	 </ScrollView>     
+          
+	<!-- ******* END RESPONSE ENTRY BOX ******** -->
+
+
+
+</LinearLayout>
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

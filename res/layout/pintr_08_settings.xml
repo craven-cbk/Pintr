@@ -1,0 +1,227 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+	
+	<ScrollView
+		android:id="@+id/settingsPage"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="10dp"
+		android:paddingRight="20dp"
+	    android:orientation="vertical" >
+
+	    	    
+	    <RelativeLayout
+			android:id="@+id/ChangeDetailsView" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp" >
+
+			<TextView
+        		android:layout_alignParentLeft="true"
+			    android:id="@+id/ChangeDetailsLabel" 
+	       		style="@style/LabelText"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Change Details" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"        		
+			    android:id="@+id/idImageView1"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+			    android:src="@drawable/light_grey_left_arrow" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"     
+			    android:id="@+id/idImageViewCross1"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp" />
+	
+		</RelativeLayout>
+		 	   
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/greyMed"/>
+	    	     
+	    <RelativeLayout
+			android:id="@+id/ChangePasswordView" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp" >
+
+			<TextView
+        		android:layout_alignParentLeft="true"
+			    android:id="@+id/ChangePasswordLabel" 
+	       		style="@style/LabelText"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Change Password" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"   
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+			    android:src="@drawable/light_grey_left_arrow" />
+			
+			
+			<ImageView
+        		android:layout_alignParentRight="true"  
+			    android:id="@+id/idImageViewCross2"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp" />
+	
+		</RelativeLayout>
+		
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/greyMed"/>
+	    
+	     
+	        
+	    <RelativeLayout
+			android:id="@+id/DeregisterView" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp" >
+
+			<TextView
+        		android:layout_alignParentLeft="true"
+			    android:id="@+id/DeregisterLabel" 
+	       		style="@style/LabelText"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Unregister" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"    
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+			    android:src="@drawable/light_grey_left_arrow" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"    
+			    android:id="@+id/idImageViewCross3"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp" />
+	
+		</RelativeLayout>
+		
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/greyMed"/>
+	    
+	             
+	    <RelativeLayout
+			android:id="@+id/NotificationsView" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp" >
+
+			<TextView
+        		android:layout_alignParentLeft="true"
+			    android:id="@+id/NotificationsLabel" 
+	       		style="@style/LabelText"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Notifications" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"    
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+			    android:src="@drawable/light_grey_left_arrow" />
+			
+			<ImageView
+        		android:layout_alignParentRight="true"    
+			    android:id="@+id/idImageViewCross4"
+			    android:layout_width="40dp"
+			    android:layout_height="40dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp" />
+	
+		</RelativeLayout>
+		
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/greyMed"/>
+	    
+	       
+	    <RelativeLayout
+			android:id="@+id/LogoutView" 
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp" >
+
+			<TextView
+        		android:layout_alignParentLeft="true"
+			    android:id="@+id/LogOutLabel" 
+	       		style="@style/LabelText"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Log Out" />
+	
+		</RelativeLayout>
+		
+	    <View
+		    android:layout_width="fill_parent"
+		    android:layout_height="1dp"
+		    android:background="@color/greyMed"/>
+	    
+	
+	</LinearLayout>
+	
+</ScrollView>
+
+
+</LinearLayout>
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

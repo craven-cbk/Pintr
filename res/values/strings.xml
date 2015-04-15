@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">PiNTR</string>
+    <string name="hello_world">Hello world!</string>
+    <string name="pintr_03_entry_page_title">Welcome to PiNTR!</string>
+    <string name="pintr_06_deregister_page_title">Deregister</string>
+    <string name="pintr_07_cod_page_title">Change your details</string>
+    <string name="pintr_08_settings_page_title">Settings</string>
+    <string name="pintr_09_change_creds_page_title">Change Credentials</string>
+    <string name="pintr_10_interests_overview_page_title">Your interests</string>
+    <string name="pintr_11_all_interests_page_title">Topics of Interest</string>
+    <string name="pintr_12_questions_manager_page_title">Conversations</string>
+    <string name="pintr_13_questions_topic_lister_page_title">Questions</string>
+    <string name="pintr_14_question_answer_page_title">Question</string>
+    <string name="action_settings">Settings</string>
+    <string name="imagetext">imagetext</string>
+    <string name="SearchForHandleHint">Enter user handle</string>
+    <string name="profileSectionRecentQuestions">Recent Questions</string>
+    <string name="profileSectionMostPopularQuestions">Most Popular Questions</string>
+    <string name="profileSectionInterests">Interests</string>
+    <string name="peopleSectionFriends">Friends</string>
+    <string name="peopleFriendRequests">Friend Requests</string>
+    <string name="peopleSectionYouLike">People You Like </string>
+    <string name="peopleSectionLikeYou">People Who Like You</string>
+
+</resources>

@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.pintr.androidapp"
+    android:versionCode="1"
+    android:versionName="1.0" >
+
+    <uses-sdk
+        android:minSdkVersion="16"
+        android:targetSdkVersion="21" />
+
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+	<uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+	<uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+ 	<uses-permission android:name="android.permission.VIBRATE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.RECEIVE" />
+    <uses-permission android:name="com.google.android.c2dm.permission.SEND" />
+            
+    
+    <application
+        android:allowBackup="true"
+        android:icon="@drawable/pintr_glossy_small"
+        android:label="@string/app_name"
+        android:theme="@style/AppTheme" >
+        
+        <activity
+        	android:windowSoftInputMode="stateHidden"
+            android:name=".PintrMain"
+            android:label="@string/app_name" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".Pintr_02_registration_page">
+        </activity>
+        <activity
+            android:name=".Pintr_01_login_page"
+        	android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".Pintr_PL_01_PostLoginPreLoad">
+        </activity>
+        <activity
+            android:name=".Pintr_03_entry_page">
+        </activity>
+        <activity
+            android:name=".Pintr_04_forgotten_login_page">
+        </activity>
+        <activity
+            android:name=".Pintr_05_ConfirmRegistration">
+        </activity>
+        <activity
+            android:name=".Pintr_06_Deregister_page">
+        </activity>
+        <activity
+            android:name=".Pintr_07_ChangeDetails">
+        </activity>
+        <activity
+            android:name=".Pintr_30_NotificationsManager">
+        </activity>
+        <activity
+            android:name=".Pintr_08_Settings">
+        </activity>
+        <activity
+            android:name=".Pintr_09_Credchg_page">
+        </activity>
+        <activity
+            android:name=".Pintr_10_InterestsOverview">
+        </activity>
+        <activity
+            android:name=".Pintr_11_AllTopicsOfInterest">
+        </activity>
+        <activity
+            android:name=".Pintr_12_QuestionsManager">
+        </activity>
+        <activity
+            android:name=".Pintr_13_QuestionsTopicLister">
+        </activity>
+        <activity
+            android:windowSoftInputMode="stateHidden"
+            android:name=".Pintr_14_DiscussionTool">
+        </activity>
+        <activity
+            android:name=".Pintr_15_PeoplePage"
+        	android:windowSoftInputMode="stateHidden">
+        </activity>
+        <activity
+            android:name=".Pintr_16_ProfileDisplayPage">
+        </activity>
+        <activity
+            android:name=".Pintr_17_ProfileQuestionsTopicLister">
+        </activity>
+        <activity
+            android:name=".Pintr_18_PeopleCategoryListerPage">
+        </activity>
+        <activity
+            android:name=".Pintr_19_MessagesOverview">
+        </activity>
+        <activity
+            android:name=".Pintr_20_MessageConversationTool">
+        </activity>
+        <activity
+            android:name=".Pintr_21_MessageRecipientPicker">
+        </activity>
+        <activity
+            android:name=".Pintr_22_EventsOverview">
+        </activity>
+        <activity
+            android:name=".Pintr_23_EventMaker">
+        </activity>
+        <activity
+            android:name=".Pintr_24_YelpVenueFinder">
+        </activity>
+        <activity
+            android:name=".Pintr_26_LFP">
+        </activity>
+        <activity
+            android:name=".Pintr_common_support_functions"
+            android:label="SptFncts" >
+        </activity>
+        
+        
+        
+        <receiver android:name=".Pintr_NT_04_ReceiveGCMMessages"
+            android:permission="com.google.android.c2dm.permission.SEND" >
+            <intent-filter>
+                <action android:name="com.google.android.c2dm.intent.RECEIVE" />
+                <category android:name="com.example.gcmconnectionregistration" />
+            </intent-filter>
+        </receiver>
+        
+        <receiver  
+            android:name=".Pintr_AM_01_EventNotifier">
+        </receiver>
+        
+        
+        <service  
+		    android:name=".Pintr_NT_03_GcmIntentService"
+		    android:enabled="true"
+    		android:exported="false" >
+		        <intent-filter>
+		            <action android:name="Pintr_NT_03_GcmIntentService" />
+		        </intent-filter>
+		</service >
+    
+    </application>
+</manifest>

@@ -1,0 +1,209 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+	
+	<ScrollView
+		android:id="@+id/settingsPage"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="10dp"
+		android:paddingRight="20dp"
+	    android:orientation="vertical" >
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" >
+
+	        <TextView
+	            style="@style/LabelText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:text="Questions of Interest" />
+
+
+	        <Switch
+	            android:id="@+id/QuestionsSwitch"
+	            android:layout_alignParentRight="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:textOff="Off"
+		        android:textOn="On"/>
+	    </RelativeLayout>
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" >
+
+	        <TextView
+	            style="@style/LabelText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:text="Question answers" />
+
+
+	        <Switch
+	            android:id="@+id/AnswersSwitch"
+	            android:layout_alignParentRight="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:textOff="Off"
+		        android:textOn="On"/>
+	    </RelativeLayout>
+	
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" >
+
+	        <TextView
+	            style="@style/LabelText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:text="Friend requests" />
+
+
+	        <Switch
+	            android:id="@+id/FriendReqSwitch"
+	            android:layout_alignParentRight="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:textOff="Off"
+		        android:textOn="On"/>
+	    </RelativeLayout>
+	
+
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" >
+
+	        <TextView
+	            style="@style/LabelText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:text="New messages" />
+
+
+	        <Switch
+	            android:id="@+id/MessageSwitch"
+	            android:layout_alignParentRight="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:textOff="Off"
+		        android:textOn="On"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" >
+
+	        <TextView
+	            style="@style/LabelText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:text="Invites" />
+
+
+	        <Switch
+	            android:id="@+id/InviteSwitch"
+	            android:layout_alignParentRight="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:textOff="Off"
+		        android:textOn="On"/>
+	    </RelativeLayout>
+	    
+	    <RelativeLayout
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="10dp"
+	        android:paddingLeft="10dp"
+	        android:paddingRight="10dp" >
+
+	        <TextView
+	            style="@style/LabelText"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+	            android:layout_alignParentLeft="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:text="Event updates" />
+
+
+	        <Switch
+	            android:id="@+id/EventUpdateSwitch"
+	            android:layout_alignParentRight="true"
+	            android:paddingBottom="10dp"
+	            android:paddingTop="10dp"
+	            android:layout_width="wrap_content"
+	            android:layout_height="wrap_content"
+		        android:textOff="Off"
+		        android:textOn="On"/>
+	    </RelativeLayout>
+	
+   	</LinearLayout>
+	
+</ScrollView>
+
+
+</LinearLayout>
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

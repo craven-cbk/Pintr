@@ -1,0 +1,79 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+    <include layout="@layout/pintr_g_92_loadspinner_view"/>
+
+    <LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="vertical"
+	    android:paddingTop="@dimen/activity_vertical_margin"
+	    android:paddingBottom="@dimen/activity_vertical_margin"
+	    android:paddingLeft="@dimen/activity_horizontal_margin"
+	    android:paddingRight="@dimen/activity_horizontal_margin" >
+
+	
+	     <TextView
+	        android:id="@+id/HandlerName"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+        	android:text="@string/app_name"
+   			style="@style/NormalText"/>
+
+	     <Spinner
+	        android:id="@+id/statusSpinner"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+	        android:layout_marginTop="5dp"
+	        android:layout_marginBottom="5dp"
+   			style="@style/SpinnerStylesMain" />
+	     
+	     <TextView
+	        android:id="@+id/textGeoloc"
+	        android:layout_width="wrap_content"
+	        android:layout_height="wrap_content"
+   			style="@style/NormalText"
+        	android:text="GEOLOC GOES HERE"/>
+	</LinearLayout>
+	
+    
+	<ScrollView
+		android:id="@+id/entryPageMain"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+
+		
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical" 
+		    android:paddingLeft="@dimen/activity_horizontal_margin"
+		    android:paddingRight="@dimen/activity_horizontal_margin"
+			android:id="@+id/entryPageDisplayArea">
+	
+		</LinearLayout>
+		     
+	</ScrollView>
+
+
+</LinearLayout>
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

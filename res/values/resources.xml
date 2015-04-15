@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources> 
+  <color name="white">#ffffff</color> 
+  <color name="PintrRed">#ff0000</color> 
+  <color name="SlateBlueGrey">#6D7B8D</color> 
+  <color name="greyMed">#E0E0E0</color>
+  <color name="LighterCharcoal">#afafaf</color>
+  <color name="LightCharcoal">#8f8f8f</color>
+  <color name="MidCharcoal">#575757</color>
+  <color name="TextColor">#555555</color>
+  <color name="MessageBubbleTextColor">#555555</color>
+  <color name="HWMenuColor">#FCE6E9</color>
+  <color name="CharcoalGreyBckGd">#5C5C5C</color>
+  <color name="cthruCharcoalGreyBckGd">#CC5C5C5C</color>
+  <color name="DarkCharcoal">#111111</color>
+  <color name="MenuButtonBckgdPress">#CCEAED</color>
+  <color name="FriendsGreen">#75F567</color>
+  <color name="MessageYellow">#fcffaa</color>
+  <color name="cthruMessageYellow">#CCfcffaa</color>
+  <color name="MessageBlue">#4CEDFF</color>
+  <color name="OfflineRed">#F50A21</color>
+  <color name="OfflineRedLight">#F59FA8</color>
+  <color name="UnreadMessageBlue">#6D6DF7</color>
+  <color name="lightBlue">#B4C7D8</color>
+  <color name="darkPastelPurple">#AC16F2</color>
+  <color name="orange">#FF9900</color>
+  <color name="pastelDarkGreen">#03C03C</color>
+  <color name="cthruPastelDarkGreen">#CC03C03C</color>
+  <color name="pastelDarkerGreen">#007423</color>
+  <color name="pastelBlue">#82AAFA</color>
+  
+</resources> 

@@ -1,0 +1,14 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+    <include layout="@layout/pintr_g_97_entrypages_header_view"/>
+  	
+	
+
+
+</LinearLayout>

@@ -1,0 +1,261 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+   
+   <LinearLayout
+	    android:id="@+id/offlineZone"
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:gravity="center_vertical|left"
+		android:background="@drawable/offline_header_bar"
+	    android:paddingBottom="10dp"
+	    android:paddingLeft="10dp"
+	    android:paddingRight="10dp"
+	    android:paddingTop="10dp"
+	    android:orientation="horizontal" 
+   		android:visibility="gone"
+	    android:layout_gravity="center_vertical|center_horizontal" >
+	   
+	     <TextView
+		    android:gravity="center" 
+   			android:textStyle="bold"
+	        android:layout_width="match_parent"
+	        android:layout_height="wrap_content"
+        	android:text="YOU ARE OFFLINE"/>
+	    
+	</LinearLayout>
+	
+    <include layout="@layout/pintr_g_98_menu_view"/>
+       
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+	    android:orientation="horizontal" 
+		android:paddingTop="10dp"
+		android:paddingBottom="10dp" 
+		android:paddingLeft="10dp"
+		android:paddingRight="10dp">
+	     
+	      <Button
+		        android:id="@+id/BackBtn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_marginRight="5dp"
+		        android:background="@drawable/green_general_button"
+		        style="@style/SmallButtonText"
+		        android:text="Back" />
+	     
+	      <Button
+		        android:id="@+id/AddBtn"
+		        android:layout_width="wrap_content"
+		        android:layout_height="wrap_content"
+		        android:layout_weight="1"
+		        android:layout_marginLeft="5dp"
+		        android:background="@drawable/green_general_button"
+		        style="@style/SmallButtonText"
+		        android:text="Add Venue" />
+	      
+	</LinearLayout>
+	
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+		    android:orientation="vertical"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp" >
+				    
+			<LinearLayout
+				android:id="@+id/eventTypeArea"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:paddingBottom="10dp"
+			    android:paddingTop="10dp" 
+		    	android:orientation="horizontal"
+				android:weightSum="2.0">
+
+		        <Spinner
+		            android:id="@+id/eventTopicSpinner"
+    				style="@style/SpinnerStylesMain"
+		        	android:layout_marginRight="5dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+			    	android:layout_weight="1" />
+
+		        <Spinner
+		            android:id="@+id/eventSubtopicSpinner"
+    				style="@style/SpinnerStylesMain"
+		        	android:layout_marginLeft="5dp"
+		            android:layout_width="wrap_content"
+		            android:layout_height="wrap_content"
+			    	android:layout_weight="1" />
+			</LinearLayout>	    
+				
+		        
+	        
+		    <LinearLayout
+		        android:id="@+id/DisplaySelection"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+			    android:orientation="vertical"
+			    android:gravity="center"
+   				android:visibility="gone">
+			    
+			     <TextView
+			    	android:gravity="left"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+		        	android:text="Your selection "/>
+			     
+			        
+			    <LinearLayout
+			        android:id="@+id/DisplayVenueSelectionLL"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+			        android:layout_marginTop="10dp"
+				    android:orientation="vertical"
+				    android:gravity="center" >
+		    	</LinearLayout>   
+		    	
+			    <Button
+			        android:id="@+id/removeLocnBtn"
+		        	android:layout_marginTop="5dp"
+		        	android:layout_marginBottom="10dp"
+		       		style="@style/SmallButtonText"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			    	android:background="@drawable/green_general_button"
+			        android:text="Remove location" /> 
+		    </LinearLayout>   
+		     
+		    
+		    
+		 <!-- -SEARCH AREA  - -->  
+			
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="horizontal"
+				android:weightSum="5.0">
+			
+			    <EditText
+			        android:id="@+id/LocationTextEntry"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+					android:hint="Location"
+			        android:layout_marginRight="10dp"
+    				style="@style/EditTextStyle"
+			    	android:layout_weight="5" >
+			    </EditText>
+			
+			    <Button
+			        android:id="@+id/findLocnBtn"
+			        style="?android:attr/buttonStyleSmall"
+				    android:layout_width="40dp"
+				    android:layout_height="40dp"
+			    	android:background="@drawable/search_button"
+			        android:text="" ></Button>
+			    
+			</LinearLayout>
+			
+			<LinearLayout
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+				android:gravity="right|center"
+				android:layout_marginTop="10dp" >
+			  	<TextView
+			        android:id="@+id/user_id"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Powered by"
+					android:layout_marginRight="10dp"
+			        android:textAppearance="?android:attr/textAppearanceLarge" />
+			    
+			    <ImageView
+			        android:id="@+id/user_attend"
+			        android:layout_width="60dp"
+			        android:layout_height="45dp"
+			        android:src="@drawable/yelp_logo_small" />
+			</LinearLayout> 
+	    
+		 <!-- -END SEARCH AREA  - -->   
+		     
+		     
+		 <!-- -USE YOUR LOCATION- -->  
+			<LinearLayout
+				android:id="@+id/eventLocnVicinityArea"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="horizontal"
+				android:weightSum="2.0"
+	        	android:layout_marginTop="10dp">
+
+			    <Button
+			        android:id="@+id/hereBtn"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			    	android:layout_weight="1"
+		       		style="@style/SmallButtonText"
+		        	android:background="@drawable/green_general_button"
+		        	android:layout_marginRight="5dp"
+			        android:text="Here" />
+			    
+			    <Button
+			        android:id="@+id/nearBtn"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			    	android:layout_weight="1"
+		       		style="@style/SmallButtonText"
+		        	android:background="@drawable/green_general_button"
+		        	android:layout_marginLeft="5dp"
+			        android:text="Near" />
+		    
+			</LinearLayout>	
+			
+		 <!-- -END USE YOUR LOCATION- -->  
+			
+	        
+	        <Button
+		        android:id="@+id/useThisLocnBtn"
+	       		style="@style/SmallButtonText"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginLeft="30dp"
+		        android:layout_marginRight="30dp"
+	        	android:layout_marginTop="20dp"
+		    	android:background="@drawable/green_general_button"
+		        android:text="Use This Location" />     
+		
+		    <LinearLayout
+		        android:id="@+id/DisplayResults"
+		        android:layout_width="match_parent"
+		        android:layout_height="wrap_content"
+		        android:layout_marginTop="20dp"
+			    android:orientation="vertical"
+			    android:gravity="left">
+		    </LinearLayout>
+      
+	
+		   			   	    
+		</LinearLayout>
+	</ScrollView>
+</LinearLayout>
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+<include layout="@layout/pintr_25_venue_viewer"/>
+    
+</RelativeLayout>

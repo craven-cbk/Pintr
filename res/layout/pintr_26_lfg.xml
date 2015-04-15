@@ -1,0 +1,230 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+	
+	<ScrollView
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+		   
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+		    android:orientation="vertical" >
+		     
+		    
+		    
+		    <LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+	    		android:gravity="center_vertical|left"
+		    	android:orientation="horizontal"
+				android:paddingTop="10dp"
+				android:weightSum="1.0">
+
+		        
+		        <Spinner 
+	  				android:id="@+id/eventOrInviteSpinner"
+		            style="@style/SpinnerStylesMain"
+					android:layout_width="0dp" 
+            		android:layout_weight=".5"
+		            android:layout_height="wrap_content"
+					android:layout_marginRight="5dp" />
+	        
+	        
+		        <Spinner 
+   					android:id="@+id/eventTopicSpinner"
+		            style="@style/SpinnerStylesMain"
+					android:layout_width="0dp" 
+            		android:layout_weight=".5"
+		            android:layout_marginLeft="5dp"
+		        	android:layout_height="wrap_content"/>
+
+		        
+		   	</LinearLayout>
+		
+		    <View
+			    android:layout_width="fill_parent"
+			    android:layout_height="1dp"
+				android:layout_marginTop="10dp"
+			    android:background="@color/greyMed"/>
+		
+	      	<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+				android:layout_marginTop="10dp"
+				android:gravity="left"
+		    	android:orientation="horizontal"
+	    	    android:id="@+id/expandCollapsibleAdvancedView">
+		        
+	   		   <TextView
+			        android:id="@+id/collapdibleDesc"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="More Options"/>
+	   		   
+	   		   <ImageView
+	        		android:layout_weight="1"
+				    android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:src="@drawable/light_grey_left_arrow" />
+			</LinearLayout>
+			 	
+	      	<View
+			    android:layout_width="fill_parent"
+			    android:layout_height="1dp"
+				android:layout_marginTop="10dp"
+			    android:background="@color/greyMed"/>
+		   	 
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+		    	android:orientation="vertical" 
+		    	android:visibility="gone"
+	    	    android:id="@+id/collapsibleAdvancedView">
+		  		
+			    <LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content" 
+		    		android:gravity="center_vertical|left"
+			    	android:orientation="horizontal"
+					android:paddingTop="10dp"
+					android:weightSum="1.0">
+	    		
+		    		<Spinner
+			            android:id="@+id/whenSpinner"
+		  				style="@style/SpinnerStylesMain"
+						android:layout_width="0dp" 
+		           		android:layout_weight=".5"
+						android:layout_marginRight="5dp"
+				        android:layout_height="wrap_content" />
+		
+					   	 
+				    <Spinner 
+		  				style="@style/SpinnerStylesMain"
+		  				android:id="@+id/distanceToEventSpinner"
+						android:layout_width="0dp" 
+		           		android:layout_weight=".5"
+						android:layout_marginLeft="5dp"
+				        android:layout_height="wrap_content" />
+			
+			   	</LinearLayout>
+		  	
+			    <EditText
+			        android:id="@+id/edittextDescription"
+			        android:layout_width="match_parent"
+			        android:layout_height="wrap_content"
+					android:layout_marginTop="10dp"
+	    			style="@style/EditTextStyle"
+	    			android:background="@drawable/text_background"
+			        android:hint="Description"/>
+		    
+			    
+			    <LinearLayout
+				    android:layout_width="match_parent"
+				    android:layout_height="wrap_content" 
+		    		android:gravity="center_vertical|left"
+			    	android:orientation="horizontal"
+					android:layout_marginTop="10dp"
+					android:weightSum="1.0">
+	
+					<EditText
+					    android:id="@+id/eventLocation"
+		    			style="@style/EditTextStyle"
+		    			android:background="@drawable/text_background"
+					    android:layout_height="wrap_content"
+						android:layout_width="0dp" 
+	            		android:layout_weight=".70"
+						android:hint="Around..."
+					    android:ems="10" >
+				    	<requestFocus />
+				    </EditText>
+	
+			    	<Button
+				        android:id="@+id/hereButton"
+				        android:background="@drawable/general_button" 
+				        style="@style/ButtonText"
+						android:layout_width="0dp" 
+	            		android:layout_weight=".30" 
+			            android:layout_height="wrap_content" 
+				        android:text="Here" />	
+	        
+			   	</LinearLayout>
+			   	
+ 			</LinearLayout>
+				
+					   	 
+	     	<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" 
+	    		android:gravity="center_vertical|left"
+		    	android:orientation="horizontal"
+				android:paddingTop="10dp"
+				android:weightSum="1.0">
+
+
+		    	<Button
+			        android:id="@+id/postButton"
+			        android:background="@drawable/general_button" 
+			        style="@style/ButtonText"
+					android:layout_width="0dp" 
+            		android:layout_weight=".50"
+					android:layout_marginRight="5dp" 
+		            android:layout_height="wrap_content" 
+			        android:text="Post" />	
+        
+		    	<Button
+			        android:id="@+id/searchButton"
+			        android:background="@drawable/general_button" 
+			        style="@style/ButtonText"
+					android:layout_width="0dp" 
+            		android:layout_weight=".50" 
+					android:layout_marginLeft="5dp"
+		            android:layout_height="wrap_content" 
+			        android:text="Search" />	
+        
+		   	</LinearLayout>
+		   	
+	     	<View
+			    android:layout_width="fill_parent"
+			    android:layout_height="1dp"
+				android:layout_marginTop="5dp"
+			    android:background="@color/greyMed"/>
+		     	
+   			 <include layout="@layout/pintr_g_92_loadspinner_view"/>
+		     	
+		    
+	     	<LinearLayout
+			    android:id="@+id/displayArea"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp"
+				android:paddingTop="10dp"
+				android:paddingBottom="10dp"
+			    android:orientation="vertical" >
+			
+			</LinearLayout>
+	
+		</LinearLayout>
+		
+	</ScrollView>
+	
+</LinearLayout>
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

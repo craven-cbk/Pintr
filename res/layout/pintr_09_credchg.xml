@@ -1,0 +1,132 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+   
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+	
+	<ScrollView
+		android:id="@+id/credsChangePage"
+		android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >
+	   
+	<LinearLayout
+	    android:layout_width="match_parent"
+	    android:layout_height="wrap_content"
+		android:paddingLeft="20dp"
+		android:paddingRight="20dp"
+	    android:orientation="vertical" >
+		
+		<TextView
+		    android:id="@+id/passwordLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Your Current Password:" />
+		
+		<EditText
+		    android:id="@+id/passwordInput"
+       		style="@style/LabelText"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dp"
+			android:layout_marginTop="10dp"
+			android:paddingRight="20dp"
+		    android:ems="10"
+    		android:background="@drawable/text_background"
+		    android:inputType="textPassword" >
+		</EditText>
+			
+		
+		
+		<TextView
+		    android:id="@+id/newpasswordLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Your new password:" />
+		
+		<EditText
+		    android:id="@+id/newpasswordInput"
+       		style="@style/LabelText"
+		    android:layout_width="match_parent"
+		    android:layout_height="30dp"
+			android:layout_marginTop="10dp"
+			android:paddingRight="20dp"
+		    android:ems="10"
+    		android:background="@drawable/text_background"
+		    android:inputType="textPassword" >
+		</EditText>
+		
+		
+		
+		<TextView
+		    android:id="@+id/repeatpasswordLabel" 
+       		style="@style/LabelText"
+			android:paddingTop="10dp"
+            android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text="Repeat new password:" />
+		
+		<EditText
+		    android:id="@+id/repeatpasswordInput"
+       		style="@style/LabelText"
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:layout_marginTop="10dp"
+			android:paddingRight="20dp"
+		    android:ems="10"
+    		android:background="@drawable/text_background"
+		    android:inputType="textPassword" >
+		</EditText>
+		    
+		<LinearLayout
+			    android:gravity="center" 
+				android:layout_marginTop="20dp"
+				android:orientation="vertical"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content" >
+			 
+			<TextView
+			    android:id="@+id/ErrorMessgagingLabel" 
+	       		style="@style/LabelText"
+				android:layout_marginTop="10dp"
+				android:layout_marginBottom="10dp"
+	            android:layout_width="wrap_content"
+			    android:layout_height="30dp"
+			    android:text="" />
+			
+			<Button
+			    android:id="@+id/SubButton"
+			    android:background="@drawable/general_button" 
+			    style="@style/ButtonText"
+				android:paddingLeft="15dp"
+				android:paddingRight="15dp"
+			    android:layout_width="wrap_content"
+			    android:layout_height="wrap_content"
+			    android:text="Register" />
+		</LinearLayout>
+		    
+	    
+	</LinearLayout>
+	
+</ScrollView>
+
+
+</LinearLayout>
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

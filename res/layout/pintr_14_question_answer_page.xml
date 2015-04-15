@@ -1,0 +1,243 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+
+<LinearLayout
+	android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+	android:orientation="vertical"
+    style="@style/generalPageBackground">
+
+    <include layout="@layout/pintr_g_99_header_view"/>
+  
+	<include layout="@layout/pintr_g_92_loadspinner_view"/>
+    
+	<ScrollView
+		android:id="@+id/qnaPage"
+	    android:layout_width="fill_parent"
+	    android:layout_height="fill_parent" >  
+				
+		<LinearLayout
+		    android:layout_width="match_parent"
+		    android:layout_height="wrap_content"
+			android:paddingLeft="10dp"
+			android:paddingRight="10dp"
+		    android:orientation="vertical">
+		    
+		     <LinearLayout
+				android:id="@+id/InterestsView" 
+		    	android:orientation="horizontal"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:paddingBottom="10dp"
+			    android:paddingTop="10dp"
+			    android:gravity="center">
+
+		         <Spinner
+		             android:id="@+id/InterestPickerSpinner"
+    				 style="@style/SpinnerStylesMain"
+			    	 android:paddingLeft="20dp"
+			    	 android:paddingTop="5dp"
+			    	 android:paddingBottom="5dp"
+		             android:layout_width="wrap_content"
+		             android:layout_height="wrap_content"/>
+                <requestFocus />
+			    
+			</LinearLayout>
+			   
+			<LinearLayout
+		    	android:id="@+id/nuAnsButtonArea" 
+   				android:visibility="gone"
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+			    android:orientation="horizontal"
+			    android:gravity="center"
+			    android:paddingBottom="@dimen/activity_vertical_margin"
+			    android:paddingTop="@dimen/activity_vertical_margin" >
+			        
+				 <Button
+			        android:id="@+id/nuAnsButton"
+			        android:background="@drawable/general_button" 
+			        style="@style/ButtonText"
+					android:paddingLeft="10dp"
+					android:paddingRight="10dp"
+			        android:layout_marginTop="5dp"
+			        android:layout_marginBottom="5dp"
+			        android:layout_width="wrap_content"
+			        android:layout_height="wrap_content"
+			        android:text="Get Different Answer" />	 	 
+			</LinearLayout>
+
+
+	<!-- QUESTION ENTRY/DISPLAY -->	
+		    
+		    <EditText
+                android:id="@+id/QuestionEntryField"
+    			style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+			    android:hint="Your Question" 
+    			android:background="@drawable/text_background"
+				android:text="" >
+                <requestFocus />
+            </EditText>	
+            
+		    <EditText
+                android:id="@+id/HashtagEntryField"
+    			style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:ems="10"
+                android:inputType="textMultiLine"
+    			android:background="@drawable/text_background"
+			    android:hint="Hashtags" 
+				android:text="" >
+                <requestFocus />
+            </EditText>		
+            
+		    	
+            	          
+
+	<!-- ANSWERS/DISCUSSION DISPLAY AREA (BALNK TIL FILLED BY JAVA) -->	  
+		    <LinearLayout
+				android:id="@+id/DiscussionDisplayView"
+		    	android:orientation="vertical"
+				android:paddingTop="10dp"  
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content">
+			</LinearLayout>
+		    
+		    
+		
+		
+	<!-- RESPONSE ENTRY BOX -->
+			<LinearLayout
+		    	android:orientation="vertical"
+		        android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+		    	android:id="@+id/AnswerDisplayArea">
+			    
+			  
+			    <ScrollView
+			    	android:layout_width="match_parent" 
+			        android:layout_height="wrap_content"  > 
+			    <LinearLayout
+			    	android:orientation="horizontal"
+			        android:layout_width="match_parent"
+				    android:layout_height="wrap_content"
+	                android:layout_marginTop="10dp"
+					android:weightSum="1.0">
+					
+				    	<EditText
+			                android:id="@+id/AnswerEntryField"
+			   				style="@style/EditTextStyle"
+			                android:layout_height="wrap_content"
+			                android:ems="10"
+			                android:inputType="textMultiLine"
+						    android:paddingLeft="20dp"
+						    android:paddingRight="20dp"
+							android:text="" 
+						    android:layout_width="0dp" 
+				            android:layout_weight=".80"
+    						android:background="@drawable/text_background"
+			   				android:hint="Your reply" >
+						</EditText>			 
+						   
+					    <RelativeLayout
+				            android:layout_weight=".20"
+						    android:layout_width="0dp" 
+						    android:layout_height="wrap_content"
+						    android:orientation="horizontal" >
+					    	<Button
+						        android:id="@+id/SubmitButton"
+						        style="@style/ButtonText"
+						        android:background="@drawable/sendmessage_button" 
+							    android:layout_width="40dp" 
+					            android:layout_height="30dp" 
+							    android:layout_alignParentRight="true"
+						        android:text="" />	
+						</RelativeLayout>
+				</LinearLayout>			
+				 </ScrollView>    		    
+            </LinearLayout>
+            
+			
+	
+            
+	<!-- "SUBMIT" BUTTON -->	   
+			<LinearLayout
+		    	android:id="@+id/ButtonDisplayArea" 
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+	            android:layout_marginTop="10dp"
+			    android:orientation="horizontal"
+				android:weightSum="1.0"
+			    android:gravity="center"
+			    android:paddingBottom="@dimen/activity_vertical_margin"
+			    android:paddingTop="@dimen/activity_vertical_margin" >
+			        
+				 <Button
+			        android:id="@+id/BackToQuestionsButton"
+			        android:background="@drawable/general_button" 
+			        style="@style/ButtonText"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"
+			        android:layout_marginTop="20dp"
+			        android:layout_width="0dp"
+				    android:layout_weight=".50"
+			        android:layout_height="wrap_content"
+			        android:text="Back" />	 
+		        
+			 	 <Button
+			        android:id="@+id/ViewUserButton"
+			        android:background="@drawable/general_button" 
+			        style="@style/ButtonText"
+					android:paddingLeft="15dp"
+					android:paddingRight="15dp"
+			        android:layout_marginTop="20dp"
+			        android:layout_width="0dp"
+				    android:layout_weight=".50"
+			        android:layout_height="wrap_content"
+			        android:text="View Their Profile" />	 
+			</LinearLayout>
+			
+				   
+			<LinearLayout
+			    android:layout_width="match_parent"
+			    android:layout_height="wrap_content"
+				android:paddingLeft="10dp"
+				android:paddingRight="20dp"
+			    android:orientation="vertical"
+			    android:gravity="center" >
+			
+				<TextView
+				    android:id="@+id/ErrorMessageLabel" 
+			       	style="@style/NormalText"
+				    android:paddingLeft="10dp"
+				    android:paddingRight="10dp"
+			        android:layout_width="wrap_content"
+				    android:layout_height="wrap_content"
+				    android:text="" /> 
+				      
+			</LinearLayout>
+			
+		</LinearLayout>
+		
+	</ScrollView>
+
+
+</LinearLayout>
+
+
+
+<include layout="@layout/pintr_g_96_settings_menu_view"/>
+    
+    
+</RelativeLayout>

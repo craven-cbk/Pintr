@@ -1,0 +1,23 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.pintr_v_0_01.PintrMain" >
+ 
+    <item android:id="@+id/interests"
+          app:showAsAction="never"
+          android:orderInCategory="100"
+          android:title="Interests" />
+    
+    
+    <item android:id="@+id/settings"
+          app:showAsAction="never"
+          android:orderInCategory="200"
+          android:title="Settings" />
+    
+    <item android:id="@+id/Questions"
+          app:showAsAction="never"
+          android:orderInCategory="300"
+          android:title="Questions" />
+    
+    
+</menu>
